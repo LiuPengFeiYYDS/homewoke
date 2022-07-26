@@ -13,7 +13,12 @@ const routes = [
   {
     path: '/form',
     name: 'form',
-    component: () => import('../views/Form')
+    component: () => import('../views/Form.vue')
+  },
+  {
+    path: '/formview',
+    name: 'formview',
+    component: () => import('../views/FormView.vue')
   },
   {
     path: '/advert',
@@ -21,14 +26,15 @@ const routes = [
     component: () => import('../views/Advert.vue')
   },
   {
-    path: '/Upload',
-    name: 'Upload',
+    path: '/upload',
+    name: 'upload',
     component: () => import('../views/Upload.vue')
   }
+
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   routes
 })
 
